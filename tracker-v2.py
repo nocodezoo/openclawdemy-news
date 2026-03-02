@@ -129,7 +129,11 @@ def generate_report():
             'timestamp': now.isoformat()
         })
     
-    scored.sort(key=lambda x: x['engagement'], reverse=True)
+    # Sort by trust score first, then engagement - fake news stays at bottom
+    scored.sort(key=lambda x: (x['truth_score'], x.get('engagement', 0)), reverse=True)
+    
+    # Filter trending to only high trust (score >= 50)
+    trending = [i for i in scored if i['truth_score'] >= 50][:10]
     
     high = len([i for i in scored if i['truth_score'] >= 75])
     mixed = len([i for i in scored if 50 <= i['truth_score'] < 75])
@@ -139,7 +143,7 @@ def generate_report():
     report = {
         'timestamp': now.isoformat(),
         'stats': {'total_items': len(scored), 'high_trust': high, 'mixed': mixed, 'low_trust': low, 'avg_score': round(avg, 1)},
-        'trending': scored[:10],
+        'trending': trending,
         'all_items': scored,
     }
     
