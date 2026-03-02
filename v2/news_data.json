@@ -2,11 +2,11 @@
   "formatted_engagement": "41.0K",
   "timestamp": "2026-03-01T19:47:50.768339",
   "stats": {
-    "total_items": 50,
-    "high_trust": 38,
-    "mixed": 6,
+    "total_items": 60,
+    "high_trust": 43,
+    "mixed": 11,
     "low_trust": 6,
-    "avg_score": 79.0
+    "avg_score": 78.1
   },
   "trending": [
     {
@@ -23,6 +23,21 @@
       "published_at": "Mar 01, 2026 at 5:52 PM",
       "formatted_engagement": "24.0K",
       "timestamp": "2026-03-01T19:47:50.768339"
+    },
+    {
+      "title": "OpenClaw News Story 60",
+      "source": "GitHub",
+      "url": "https://example.com",
+      "engagement": 19149,
+      "type": "release",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 0.11623699343727098,
+      "truth_score": 100,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193753",
+      "formatted_engagement": "19.1K"
     },
     {
       "title": "OpenClaw v2.0 Released with Revolutionary Agent System",
@@ -143,21 +158,6 @@
       "published_at": "Mar 01, 2026 at 5:36 PM",
       "formatted_engagement": "3.6K",
       "timestamp": "2026-03-01T19:47:50.768339"
-    },
-    {
-      "title": "How to Install OpenClaw on Any System - Full Tutorial",
-      "source": "Dev.to",
-      "url": "https://dev.to",
-      "engagement": 3200,
-      "type": "tutorial",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400",
-      "posted_hours_ago": 2.1,
-      "truth_score": 100,
-      "label": "\u2705 High Trust",
-      "color": "green",
-      "published_at": "Mar 01, 2026 at 5:21 PM",
-      "formatted_engagement": "3.2K",
-      "timestamp": "2026-03-01T19:47:50.768339"
     }
   ],
   "all_items": [
@@ -175,6 +175,21 @@
       "published_at": "Mar 01, 2026 at 5:52 PM",
       "formatted_engagement": "24.0K",
       "timestamp": "2026-03-01T19:47:50.768339"
+    },
+    {
+      "title": "OpenClaw News Story 60",
+      "source": "GitHub",
+      "url": "https://example.com",
+      "engagement": 19149,
+      "type": "release",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 0.11623699343727098,
+      "truth_score": 100,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193753",
+      "formatted_engagement": "19.1K"
     },
     {
       "title": "OpenClaw v2.0 Released with Revolutionary Agent System",
@@ -447,6 +462,21 @@
       "timestamp": "2026-03-01T19:47:50.768339"
     },
     {
+      "title": "OpenClaw News Story 54",
+      "source": "GitHub",
+      "url": "https://example.com",
+      "engagement": 38243,
+      "type": "release",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 0.7020446686127637,
+      "truth_score": 95,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193708",
+      "formatted_engagement": "38.2K"
+    },
+    {
       "title": "OpenClaw vs Claude: In-Depth Comparison",
       "source": "YouTube",
       "url": "https://youtube.com",
@@ -627,6 +657,21 @@
       "timestamp": "2026-03-01T19:47:50.768339"
     },
     {
+      "title": "OpenClaw News Story 55",
+      "source": "The Verge",
+      "url": "https://example.com",
+      "engagement": 21528,
+      "type": "feature",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 1.3017533962350778,
+      "truth_score": 87,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193714",
+      "formatted_engagement": "21.5K"
+    },
+    {
       "title": "OpenClaw vs GPT-4: Performance Benchmarks",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com",
@@ -687,6 +732,36 @@
       "timestamp": "2026-03-01T19:47:50.768339"
     },
     {
+      "title": "OpenClaw News Story 56",
+      "source": "Reddit",
+      "url": "https://example.com",
+      "engagement": 25779,
+      "type": "tutorial",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 2.6760206305242606,
+      "truth_score": 80,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193723",
+      "formatted_engagement": "25.8K"
+    },
+    {
+      "title": "OpenClaw News Story 53",
+      "source": "GitHub",
+      "url": "https://example.com",
+      "engagement": 28516,
+      "type": "tutorial",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 0.266356923980669,
+      "truth_score": 77,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193700",
+      "formatted_engagement": "28.5K"
+    },
+    {
       "title": "OpenClaw on Reddit Daily Discussion",
       "source": "Reddit",
       "url": "https://reddit.com",
@@ -730,6 +805,21 @@
       "published_at": "Mar 01, 2026 at 5:20 PM",
       "formatted_engagement": "2.8K",
       "timestamp": "2026-03-01T19:47:50.768339"
+    },
+    {
+      "title": "OpenClaw News Story 59",
+      "source": "YouTube",
+      "url": "https://example.com",
+      "engagement": 10139,
+      "type": "feature",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 2.29129349270759,
+      "truth_score": 71,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193745",
+      "formatted_engagement": "10.1K"
     },
     {
       "title": "TechCrunch Covers OpenClaw's Growth",
@@ -820,6 +910,66 @@
       "published_at": "Mar 01, 2026 at 6:20 PM",
       "formatted_engagement": "18.0K",
       "timestamp": "2026-03-01T19:47:50.768339"
+    },
+    {
+      "title": "OpenClaw News Story 58",
+      "source": "Twitter/X",
+      "url": "https://example.com",
+      "engagement": 8305,
+      "type": "tutorial",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 2.072653999823891,
+      "truth_score": 65,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193737",
+      "formatted_engagement": "8.3K"
+    },
+    {
+      "title": "OpenClaw News Story 57",
+      "source": "Dev.to",
+      "url": "https://example.com",
+      "engagement": 36238,
+      "type": "tutorial",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 1.2356930271847395,
+      "truth_score": 62,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193729",
+      "formatted_engagement": "36.2K"
+    },
+    {
+      "title": "OpenClaw News Story 51",
+      "source": "LinkedIn",
+      "url": "https://example.com",
+      "engagement": 38610,
+      "type": "feature",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 1.231114182276606,
+      "truth_score": 50,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193666",
+      "formatted_engagement": "38.6K"
+    },
+    {
+      "title": "OpenClaw News Story 52",
+      "source": "Twitter/X",
+      "url": "https://example.com",
+      "engagement": 37531,
+      "type": "news",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+      "posted_hours_ago": 2.86280578452662,
+      "truth_score": 50,
+      "label": "\u2705 High Trust",
+      "color": "green",
+      "published_at": "Mar 01, 2026 at 8:02 PM",
+      "timestamp": "2026-03-01T20:02:24.193692",
+      "formatted_engagement": "37.5K"
     },
     {
       "title": "OpenClaw is Shutting Down - Rumors Debunked",
