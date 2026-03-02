@@ -126,6 +126,7 @@ def generate_report():
             'label': get_label(score),
             'color': get_color(score),
             'published_at': gen_timestamp(hours),
+            'formatted_engagement': format_engagement(item['engagement']),
             'timestamp': now.isoformat()
         })
     
@@ -141,7 +142,8 @@ def generate_report():
     avg = sum(i['truth_score'] for i in scored) / len(scored)
     
     report = {
-        'timestamp': now.isoformat(),
+        'formatted_engagement': format_engagement(item['engagement']),
+            'timestamp': now.isoformat(),
         'stats': {'total_items': len(scored), 'high_trust': high, 'mixed': mixed, 'low_trust': low, 'avg_score': round(avg, 1)},
         'trending': trending,
         'all_items': scored,
