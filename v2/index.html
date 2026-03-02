@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦞 OpenClaw News | Live</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #0a0a0a; color: white; }
+        
+        /* News Ticker */
+        .news-ticker {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+            animation: ticker 25s linear infinite;
+        }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        
+        /* Hero gradient */
+        .hero-gradient { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%); }
+        
+        /* Card hover */
+        .news-card { transition: all 0.3s ease; }
+        .news-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(249, 115, 22, 0.2); }
+        
+        /* Image overlay */
+        .img-overlay { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%); }
+        
+        /* Score badges */
+        .score-green { background: rgba(34, 197, 94, 0.9); }
+        .score-yellow { background: rgba(234, 179, 8, 0.9); }
+        .score-orange { background: rgba(249, 115, 22, 0.9); }
+        .score-red { background: rgba(239, 68, 68, 0.9); }
+        
+        .live-dot { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    </style>
+</head>
+<body>
+    <!-- NEWS TICKER -->
+    <div class="news-ticker py-3 overflow-hidden">
+        <div class="whitespace-nowrap">
+            <span class="mx-8 text-white font-bold">🦞 OPENCLAW NEWS • BREAKING: V2.0 RELEASED • 50 AI MODELS SUPPORTED • 10K DISCORD MEMBERS • TRUTH SCORES • LIVE UPDATES • </span>
+            <span class="mx-8 text-white font-bold">🦞 OPENCLAW NEWS • BREAKING: V2.0 RELEASED • 50 AI MODELS SUPPORTED • 10K DISCORD MEMBERS • TRUTH SCORES • LIVE UPDATES • </span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hero-gradient py-10 border-b-2 border-orange-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="live-dot w-3 h-3 bg-red-500 rounded-full"></span>
+                        <span class="text-red-400 font-bold">LIVE</span>
+                    </div>
+                    <h1 class="text-6xl font-black tracking-tight">
+                        🦞 OpenClaw <span class="text-orange-500">News</span>
+                    </h1>
+                    <p class="text-xl text-zinc-400 mt-3">Your source for OpenClaw updates • Reality vs Fiction</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-zinc-500">Last Updated</p>
+                    <p id="last-updated" class="text-xl font-bold text-orange-400">--</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="bg-zinc-900 py-6 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-5 gap-4 text-center">
+                <div><p id="total-items" class="text-4xl font-black">--</p><p class="text-zinc-500">Total Stories</p></div>
+                <div><p id="high-trust" class="text-4xl font-black text-green-400">--</p><p class="text-zinc-500">High Trust</p></div>
+                <div><p id="mixed" class="text-4xl font-black text-yellow-400">--</p><p class="text-zinc-500">Mixed</p></div>
+                <div><p id="low-trust" class="text-4xl font-black text-red-400">--</p><p class="text-zinc-500">Low Trust</p></div>
+                <div><p id="avg-score" class="text-4xl font-black text-orange-400">--</p><p class="text-zinc-500">Avg Score</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="py-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span class="w-4 h-4 bg-orange-500 rounded-full"></span>Featured Story</h2>
+            <div id="featured" class="relative rounded-2xl overflow-hidden h-[450px] news-card cursor-pointer">
+                <!-- Featured loads here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENDING -->
+    <section class="py-10 px-6 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></>🔥 Trending Now</h2>
+            <div id="trending" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Trending loads here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOMMENDED -->
+    <section class="py-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-green-900/20 border-2 border-green-500/30 rounded-xl p-4 mb-6">
+                <h2 class="text-2xl font-bold text-green-400 mb-2">✅ Recommended for You</h2>
+                <p class="text-zinc-400">High quality • Verified • Clicking these is what we recommend</p>
+            </div>
+            <div id="recommended" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Recommended loads here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL STORIES -->
+    <section class="py-10 px-6 bg-zinc-900/30 pb-24">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">📰 All Stories</h2>
+            <div id="all-stories" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- All stories load here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAKE NEWS MODAL -->
+    <div id="modal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+        <div class="bg-zinc-900 border-2 border-red-500 rounded-2xl p-8 max-w-md text-center">
+            <div class="text-6xl mb-4">😏</div>
+            <h3 class="text-2xl font-bold text-red-400 mb-4">Fake News Detected!</h3>
+            <p class="text-zinc-300 mb-6">This story appears fake or unverified. Better options above. Search yourself if you like 😊</p>
+            <button onclick="document.getElementById('modal').classList.add('hidden')" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-xl">OK 👍</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal() { document.getElementById('modal').classList.remove('hidden'); document.getElementById('modal').classList.add('flex'); }
+        
+        async function loadData() {
+            try {
+                const res = await fetch('news_data.json?_=' + Date.now());
+                const data = await res.json();
+                render(data);
+            } catch(e) { console.log('Error:', e); }
+        }
+
+        function getScoreClass(score) {
+            if (score >= 75) return 'score-green';
+            if (score >= 50) return 'score-yellow';
+            if (score >= 25) return 'score-orange';
+            return 'score-red';
+        }
+
+        function renderCard(item, size = 'normal') {
+            const isFake = item.truth_score < 25;
+            const hasLink = item.url && !isFake;
+            const link = hasLink ? item.url : '#';
+            const target = hasLink ? 'target="_blank"' : '';
+            const onClick = isFake ? 'onclick="showModal()"' : '';
+            const cursor = isFake ? 'cursor-not-allowed opacity-80' : '';
+            
+            const imgH = size === 'hero' ? 'h-full' : 'h-56';
+            const pad = size === 'hero' ? 'absolute bottom-0 left-0 right-0 p-10 img-overlay' : 'p-5';
+            const titleSize = size === 'hero' ? 'text-3xl' : 'text-lg';
+            
+            return `
+                <a href="${link}" ${target} ${onClick} class="block bg-zinc-900 rounded-xl overflow-hidden news-card ${cursor}">
+                    <div class="relative ${imgH}">
+                        <img src="${item.image}" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 ${getScoreClass(item.truth_score)} text-white font-bold px-4 py-2 rounded-full">
+                            ${item.truth_score}/100
+                        </div>
+                        ${size !== 'hero' ? '<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/80 to-transparent"></div>' : ''}
+                    </div>
+                    <div class="${pad}">
+                        <div class="flex items-center gap-2 mb-3 flex-wrap">
+                            <span class="bg-zinc-800 px-3 py-1 rounded text-xs">${item.source}</span>
+                            <span class="text-orange-400 text-sm">${item.published_at}</span>
+                            <span class="text-zinc-500">•</span>
+                            <span class="text-zinc-400 text-sm">${item.formatted_engagement} views</span>
+                        </div>
+                        <h3 class="font-bold ${titleSize} mb-3">${item.title}</h3>
+                        ${isFake ? '<p class="text-red-400 text-sm">⚠️ Likely fake</p>' : ''}
+                        ${size === 'recommended' && !isFake ? '<p class="text-green-400 text-sm mt-2">✓ Clicking this is what we recommend</p>' : ''}
+                    </div>
+                </a>
+            `;
+        }
+
+        function render(data) {
+            document.getElementById('total-items').textContent = data.stats.total_items;
+            document.getElementById('high-trust').textContent = data.stats.high_trust;
+            document.getElementById('mixed').textContent = data.stats.mixed;
+            document.getElementById('low-trust').textContent = data.stats.low_trust;
+            document.getElementById('avg-score').textContent = data.stats.avg_score;
+            document.getElementById('last-updated').textContent = new Date(data.timestamp).toLocaleTimeString();
+            
+            document.getElementById('featured').innerHTML = data.trending[0] ? renderCard(data.trending[0], 'hero') : '';
+            document.getElementById('trending').innerHTML = data.trending.slice(1, 7).map(renderCard).join('');
+            
+            const rec = data.all_items.filter(i => i.truth_score >= 50 && i.url).slice(0, 6);
+            document.getElementById('recommended').innerHTML = rec.map(i => renderCard(i, 'recommended')).join('');
+            
+            document.getElementById('all-stories').innerHTML = data.all_items.map(renderCard).join('');
+        }
+
+        loadData();
+        setInterval(loadData, 30000);
+    </script>
+</body>
+</html>
